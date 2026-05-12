@@ -25,6 +25,9 @@ jobs:
           sleep 5
           curl http://localhost:3000 || true
           pkill node
+         
+      - name: Build Docker Image
+        run: docker build -t github-action-demo .    
 
 
 
